@@ -26,6 +26,7 @@
    ```bash
    $ 
    $ python -m venv env
+   $ source env/scripts/activate (for mac/linux/gitbash) 
    ```
    - Install all dependencies (within the virtual environment)
    ```bash
