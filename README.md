@@ -4,7 +4,7 @@
    - Fork the Repository.
    - Clone your fork to your local environment
    ```bash
-   $ git clone https://github.com/<your-username>/EDC 2022
+   $ git clone https://github.com/<your-username>/EDC-2022
    ```
    ```
    - Make the required changes, then:
