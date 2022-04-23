@@ -1,0 +1,12 @@
+.env
+.python-version
+__pypackages__/
+.venv
+env/
+venv/
+ENV/
+.mypy_cache/
+.vscode
+.DS_Store
+Pipfile
+Pipfile.lock

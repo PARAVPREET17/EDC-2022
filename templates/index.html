@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-uWxY/CJNBR+1zjPWmfnSnVxwRheevXITnMqoEIeG1LJrdI0GlVs/9cVSyPYXdcSF"
+      crossorigin="anonymous"
+    />
+    <link rel="icon" href="{{ url_for('static', filename='edc.png') }}" type="image/png">
+    <script src="https://kit.fontawesome.com/4fb8928311.js" crossorigin="anonymous"></script>
+
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"/>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/tilt.js/1.2.1/tilt.jquery.min.js"/>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='main.css') }}" />
+    <style>
+      .hero {
+        font-family: arial;
+        
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-color: rgb(135, 206, 235);
+  
+      }
+    </style>
+
+    <title>EDC TECHNICAL TEAM 2022</title>
+  </head>
+   <body id="page-top">
+
+	<!-- Navigation -->
+
+
+	<div class="container-fluid hero" style="height: 100vh;background-image: url("bg.jpeg")">
+		<div class="row" style="text-align: center;">
+			<div class="col-12">
+				<h1 class="text" style="padding-top:150px; color: rgb(255, 255, 0)">
+					<strong>Entrepreneurship Development Cell</strong><br>
+					Technical Team
+				</h1>
+			</div>
+			<div class="col-12">
+				<h3 class="smallInfo p-5" style="color: #ffffff;">Get to know about the members of EDC Technical team
+					and their GitHub Ids</h3>
+				<div class="button">
+					<a  href="#about">Explore Team	</a>
+				</div>
+			</div>
+		</div>
+	</div>
+<br>
+
+  <div class="row">
+    {% if not pages %}
+      <center><h3 class="no-file-text">Your PRs made during our session would feature here!</h3></center>
+{% endif %}
+    {% for page in pages %}
+    <div class="col-md-4">
+      <a href="{{ page.url }}">
+      <div class="tilt-card" data-tilt data-tilt-glare data-tilt-max-glare="0.4" data-tilt data-tilt-scale="1.05">
+        <div class="tilt-card__bg" style="background-image: url(https://i0.wp.com/www.bc-security.org/wp-content/uploads/2019/05/Hacktoberfest_Wallpaper_desktop-02.png?fit=1920%2C1080&ssl=1);
+        background-position: bottom; background-size: cover;"></div>
+        <div class="tilt-card__inner">
+          <h3 class="tilt-card__title">{{ page.name }}</h3>
+          <p class="tilt-card__text">{{ page.rollNo }}</p>
+        </div>
+      </div></a>
+    </div>
+    {% endfor %}
+  </div>
+</div>
+
+ <footer class="site-footer">
+  <div class="container">
+
+  </div>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-8 col-sm-6 col-xs-12">
+        <p class="copyright-text"> IDEATE • ASCEND • LEAD
+             </p>
+      </div>
+
+      <div class="col-md-4 col-sm-6 col-xs-12">
+        <ul class="social-icons">
+          
+      
+          <li><a class="dribbble" href="https://www.instagram.com/edc_tiet/" target="_blank" rel="noopener noreferrer"><i class="fa fa-instagram"></i></a></li>
+          <li><a class="linkedin" href="https://www.linkedin.com/company//" target="_blank" rel="noopener noreferrer"><i class="fa fa-linkedin"></i></a></li>   
+        </ul>
+      </div>
+    </div>
+  </div>
+</footer> 
+
+
+  
+<script src="{{ url_for('static', filename='index.js') }}"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-kQtW33rZJAHjgefvhyyzcGF3C5TFyBQBA13V1RKPf4uH+bwyzQxZ6CmMZHmNBEfJ" crossorigin="anonymous"></script>
+
+    
+  </body>
+</html>
