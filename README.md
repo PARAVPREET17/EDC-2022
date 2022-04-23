@@ -24,7 +24,6 @@
    Make sure you have Python and pip installed before proceeding further.
    - Setup a virtual Environment, we have used venv for the same
    ```bash
-   $ 
    $ python -m venv env
    $ source env/scripts/activate  
    ```
