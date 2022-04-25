@@ -131,7 +131,7 @@ nav.stroke ul li a:hover {
 .btn {
   width: 180px;
   padding: 5%;
-  background-color: #b53a25;
+  background-color: rgb(189, 178, 32);
   border-radius: 20px;
   color: #dad7cd;
   font-weight: bolder;
@@ -139,7 +139,7 @@ nav.stroke ul li a:hover {
 }
 .btn:hover {
   background-color: #dad7cd;
-  color: #b53a25;
+  color: rgb(189, 178, 32);
 }
 .btn1 {
   margin-left: -10% !important;
@@ -183,7 +183,7 @@ nav.stroke ul li a:hover {
   transform: perspective(1000px);
   min-height: 250px;
   position: relative;
-  width: 100%;
+  width: 35%;
   background-color: #fff;
   margin-bottom: 1.6rem;
   transform-style: preserve-3d;
@@ -513,7 +513,7 @@ body,html{
 
 body {
 font-family:arial;
-background-image: url("bg.jpeg") !important;
+/* background-image: url("bg.jpeg") !important; */
 background-repeat: no-repeat;
 background-size: cover;
 background-color:  rgb(20, 21, 22);
