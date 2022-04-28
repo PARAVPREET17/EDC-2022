@@ -181,9 +181,9 @@ nav.stroke ul li a:hover {
 .tilt-card {
   transform-style: preserve-3d;
   transform: perspective(1000px);
-  min-height: 250px;
+  min-height: 350px;
   position: relative;
-  width: 35%;
+  
   background-color: #fff;
   margin-bottom: 1.6rem;
   transform-style: preserve-3d;

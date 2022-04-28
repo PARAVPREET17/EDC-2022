@@ -57,14 +57,16 @@
 
   <div id="about" style="background-color:black;">
     <h2 style="color:yellow ;padding-top:47px;font-size:40px;padding-bottom:20px"><strong>EDC TECHNICAL Team 2022</strong></h2>
-  <div class=" container row">
-    {% if not pages %}
+  <div class="container">
+     {% if not pages %}
       <center><h3 class="no-file-text" style="color:'white'">Your PRs made during our session would feature here!</h3></center>
-{% endif %}
-    {% for page in pages %}
-    <div class="col-md-4">
+{% endif %} 
+<div class="row" style="display:flex; flex-wrap: wrap;">
+  {% for page in pages %}
+    <div class="col-4" style="width:33.33%">
+      
       <a href="{{ page.url }}">
-      <div class="tilt-card" data-tilt data-tilt-glare data-tilt-max-glare="0.4" data-tilt data-tilt-scale="1.05">
+      <div class="tilt-card" data-tilt data-tilt-glare data-tilt-max-glare="0.4" data-tilt data-tilt-scale="1.05" style="width:100%">
         <div class="tilt-card__bg" style="background-color:yellow;
         background-position: bottom; background-size: cover;"></div>
         <div class="tilt-card__inner">
@@ -72,8 +74,11 @@
           <p class="tilt-card__text">{{ page.rollNo }}</p>
         </div>
       </div></a>
+     
     </div>
     {% endfor %}
+    
+    </div>
   </div>
 </div>
 
