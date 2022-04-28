@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <script src="https://kit.fontawesome.com/4fb8928311.js" crossorigin="anonymous"></script>
+
+  <title>Template</title>
+</head>
+
+<body>
+  <style>
+    body {
+      background-color: black;
+    }
+
+    a {
+      text-decoration: none;
+      color: #fff;
+    }
+
+    .fas {
+      font-size: 3rem;
+      margin: 50px;
+    }
+
+    .fab {
+      margin: 5px;
+    }
+
+    .content {
+      color: #fff;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      font-size: 30px;
+      font-family: "Montserrat", sans-serif;
+      font-weight: 700;
+      letter-spacing: 2px;
+    }
+
+    .content p {
+      margin: 15px 0;
+    }
+
+    .name {
+      text-transform: uppercase;
+      font-size: 4.5rem;
+      margin: 15px 0;
+      background: -webkit-linear-gradient(#935ef5, #ed94cc);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+  </style>
+
+
+  <a href="{{ url_for('index') }}"><i class="fas fa-arrow-left"></i></a>
+
+  <div class="content">
+    <p>Hi, I'm</p>
+    <h1 class="name">VASU</h1>
+    <p>
+      🔭 I’m currently working on My Personal Portfolio Website.
+      🌱 I’m currently learning Front Web Dev
+      🌌 Ask me about anything, I am happy to help
+      ⚡ Fun fact: I play cricket 🏏
+    </p>
+    <a href="https://github.com/tohanivasu" target="_blank"><i class="fab fa-github"></i></a>
+    <a href="https://twitter.com/home" target="_blank"><i class="fab fa-twitter"></i></a>
+
+    <a href="" target="_blank"><i class="fab fa-instagram"></i></a>
+  </div>
+</body>
+
+</html>
