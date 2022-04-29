@@ -22,7 +22,8 @@
         
         background-repeat: no-repeat;
         background-size: cover;
-        background-color: rgb(135, 206, 235);
+        background-image: url('{{ url_for('static', filename='bg.jpeg')}}')
+       
   
       }
     </style>
@@ -34,7 +35,7 @@
 	<!-- Navigation -->
 
 
-	<div class="container-fluid hero" style="height: 100vh;background-image: url("bg.jpeg")">
+	<div class="container-fluid hero" style="height:97vh;" >
 		<div class="row" style="text-align: center;">
 			<div class="col-12">
 				<h1 class="text" style="padding-top:150px; color: rgb(255, 255, 0)">
@@ -44,34 +45,43 @@
 			</div>
 			<div class="col-12">
 				<h3 class="smallInfo p-5" style="color: #ffffff;">Get to know about the members of EDC Technical team
-					and their GitHub Ids</h3>
-				<div class="button">
-					<a  href="#about">Explore Team	</a>
-				</div>
+				</h3>
+        <a href=#about>
+				<button type="button" class="button " >
+					<div style="font-size:19px;font-weight:bold">Explore Team</div>
+				</button>
+        </a>
 			</div>
 		</div>
 	</div>
-<br>
 
-  <div class="row">
-    {% if not pages %}
-      <center><h3 class="no-file-text">Your PRs made during our session would feature here!</h3></center>
-{% endif %}
-    {% for page in pages %}
-    <div class="col-md-4">
+  <div id="about" style="background-color:black;">
+    <h2 style="color:yellow ;padding-top:47px;font-size:40px;padding-bottom:20px"><strong>EDC TECHNICAL Team 2022</strong></h2>
+  <div class="container">
+     {% if not pages %}
+      <center><h3 class="no-file-text" style="color:'white'">Your PRs made during our session would feature here!</h3></center>
+{% endif %} 
+<div class="row" style="display:flex; flex-wrap: wrap;">
+  {% for page in pages %}
+    <div class="col-4" style="width:33.33%">
+      
       <a href="{{ page.url }}">
-      <div class="tilt-card" data-tilt data-tilt-glare data-tilt-max-glare="0.4" data-tilt data-tilt-scale="1.05">
-        <div class="tilt-card__bg" style="background-image: url(https://i0.wp.com/www.bc-security.org/wp-content/uploads/2019/05/Hacktoberfest_Wallpaper_desktop-02.png?fit=1920%2C1080&ssl=1);
+      <div class="tilt-card" data-tilt data-tilt-glare data-tilt-max-glare="0.4" data-tilt data-tilt-scale="1.05" style="width:100%">
+        <div class="tilt-card__bg" style="background-color:yellow;
         background-position: bottom; background-size: cover;"></div>
         <div class="tilt-card__inner">
           <h3 class="tilt-card__title">{{ page.name }}</h3>
           <p class="tilt-card__text">{{ page.rollNo }}</p>
         </div>
       </div></a>
+     
     </div>
     {% endfor %}
+    
+    </div>
   </div>
 </div>
+
 
  <footer class="site-footer">
   <div class="container">
